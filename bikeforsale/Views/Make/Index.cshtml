@@ -1,0 +1,43 @@
+﻿@model IEnumerable<bikeforsale.Models.Make>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<div class="row">
+    <div class="col-6">
+
+        <h2 class="text-info">Make of Vechicle</h2>
+    </div>
+    <div class="col-6 text-right">
+
+        <a class="btn btn-info" asp-action="Create">Add New Makes</a>
+    </div>
+    <br /><br />
+    <table class="table table-striped border">
+        <tr class="table-info">
+            <th>
+                @Html.DisplayNameFor(m=>m.Name)
+            </th>
+             <th>
+
+             </th>
+        </tr>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <th>
+                    @Html.DisplayFor(m=>item.Name)
+                </th>
+                <th></th>
+            </tr>
+        }
+    </table>
+</div>
+
